@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: white;
+    margin: 0;
+    
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+}
+
+button{
+    background-color: rgb(91, 52, 134);
+    color: white;
+    font-size: 18px;
+    
+    border: 2px solid rgb(91, 52, 134);
+    border-radius: 20px;
+
+    height: 60px;
+    width: 30%;
+
+    transition: background-color 0.3s ease-out;
+}
+
+textarea{
+    background-color: transparent;
+
+    resize: none;
+    border: none;
+}
+
+textarea:focus {outline: none;}
+
+dialog{
+    width: 550px;
+
+    border: none;
+    border-radius: .2rem;
+
+    text-align: center;
+}
+
+dialog::backdrop{
+    background: rgba(0, 0, 0, .9);
+}
+
+dialog h1{
+    color: rgb(91, 52, 134);
+    margin: auto;
+    font-size: 2rem;
+}
+
+dialog p{
+    color: rgb(91, 52, 134);
+    font-weight: 300;
+}
+
+dialog button{
+    color: white;
+
+    border: 2px solid rgb(91, 52, 134);
+    border-radius: 1rem;
+    background-color: rgb(91, 52, 134);
+
+    width: 80px;
+    height: 40px;
+
+    transition-duration: 0.4s;
+}
+
+dialog button:hover{
+    background-color: white;
+    color: rgb(91, 52, 134);
+}
+
+dialog button:focus{
+    outline: none;
+}
+
+#box-principal{
+    position: relative;
+    height: 90%; 
+    width: 95%;
+    background-color: rgba(109, 110, 129, 0.8);
+    overflow: hidden;
+
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#box-principal::before{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('nuvens.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    opacity: 0.6;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#logo{
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    color: rgb(234, 234, 240);
+
+    display: flex;
+    position: absolute;
+    top: -55px;
+}
+
+#box-input{
+    height: 100%;
+    width: 60%;
+}
+
+#box-input #box-text{
+    height: 82%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+}
+
+#box-input #box-text textarea{
+    color: rgb(234, 234, 240);
+
+    height: 60%;
+    width: 90%;
+
+    font-size: 30px;
+}
+
+#box-input #box-watchout{
+    color: rgb(234, 234, 240);
+    font-size: 14px;
+
+    height: 3%;
+    width: 100%;
+}
+
+#box-input #box-buttons{
+    height: 15%;
+    width: 100%;
+}
+
+#box-input #box-buttons button{
+    margin-right: 15px;
+}
+
+#btCrip:hover{
+    background-color: rgb(234, 234, 240);
+    color: rgb(91, 52, 134);
+}
+
+#btDescrip{
+    background-color: rgb(234, 234, 240);
+    color: rgb(91, 52, 134);
+}
+
+#btDescrip:hover{
+    background-color: rgb(91, 52, 134);
+    color: rgb(234, 234, 240);
+}
+
+#box-output{
+    background-color: rgb(234, 234, 240);
+    height: 95%;
+    width: 25%;
+    margin-right: 30px;
+
+    border-radius: 20px;
+}
+
+#noMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+
+    color: rgb(91, 52, 134);
+
+    width: 75%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#noMessage i{
+    font-size: 150px;
+    margin-bottom: 10px;
+    animation: float 5s ease-in-out infinite;
+}
+
+#noMessage h2 {
+    margin: 10px 0; /* Espaçamento ao redor do título */
+}
+
+#noMessage p {
+    font-size: 15px;
+    margin: 0px 0; /* Espaçamento ao redor do parágrafo */
+}
+
+#box-output #box-text{
+    height: 85%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box-output #box-text textarea{
+    color: rgb(91, 52, 134);
+    display: none;
+
+    height: 70%;
+    width: 90%;
+
+    font-size: 25px;
+}
+
+#box-output #box-buttons{
+    height: 15%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+#btCopiar{
+    margin-top: 10px;
+    width: 80%;
+    display: none;
+}
+
+#box-output #box-buttons button:hover{
+    background-color: rgb(234, 234, 240);
+    color: rgb(91, 52, 134);
+}
+
+@media screen and (max-width: 1366px){
+    #logo{
+        font-family: "Pacifico", cursive;
+        font-size: 30px;
+        color: rgb(234, 234, 240);
+
+        display: flex;
+        position: absolute;
+        top: -35px;
+    }
+
+    #noMessage{width: 100%;}
+    
+    #noMessage i{font-size: 130px;}
+    
+    #noMessage h2{font-size: 20px;}
+    
+    #noMessage p{font-size: 15px;}
+
+    #box-output #box-text textarea{font-size: 18px;}
+
+    #btCopiar {width: 50%;}
+}
+
+@media screen and (max-width: 810px){
+    body{
+        background-color: rgb(234, 234, 240);
+
+        margin-top: 17%;
+    }
+
+    button{
+        height: 40px;
+        width: 45%;
+        
+        font-size: 15px;
+    }
+
+    dialog{
+        width: 400px;
+    }
+    
+    #box-principal{
+        background-color: transparent;
+        min-height: 1150px;
+        width: 90%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        box-shadow: none;
+        margin-top: 20px;
+    }
+
+    #box-principal::before{
+        background-image: none;
+    }
+
+    #logo{
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+        color: rgb(91, 52, 134);
+
+        display: flex;
+        position: absolute;
+        top: -25px;
+    }
+
+    #box-input{
+        height: 650px;
+        width: 95%;
+        margin: 0;
+    }
+    
+    #box-input #box-text{
+        justify-content: center;
+    }
+
+    #box-input #box-text textarea{
+        height: 60%;
+        color: rgb(91, 52, 134);
+        font-size: 25px;
+    }
+
+    #box-input #box-watchout{
+        color: rgb(82, 82, 85);
+        font-size: 12px;
+        
+        display: flex;
+        justify-content: center;
+    }
+
+    #box-input #box-buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    #box-input #box-buttons button{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    #box-output{
+        background-color: white;
+        box-shadow: 5px 5px 10px rgba(129, 128, 128, 0.5);
+
+        height: 400px;
+        width: 100%;
+
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    #noMessage{width: 100%;}
+    
+    #noMessage i{font-size: 60px;}
+    
+    #noMessage h2{font-size: 20px;}
+    
+    #noMessage p{font-size: 15px;}
+
+    #box-output #box-text textarea{font-size: 18px;}
+
+    #btCopiar {width: 50%;}
+}

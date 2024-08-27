@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Decodificador</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script src="js/script.js" defer></script>
+
+        <script src="https://kit.fontawesome.com/c752419ab9.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        
+        <dialog id="modal">
+            <h1>Instruções:</h1>
+            <p>Adicione a mensagem desejada na área de texto e utilize os dois botões disponíveis para chegar no resultado correspondente</p>
+            <button id="btModal">OK</button>
+        </dialog>
+
+        <div id="box-principal">
+            <div id="box-input">
+                <div id="logo">
+                    <h1>V</h1>
+                </div>
+                <div id="box-text">
+                    <textarea id="inputText" placeholder="Digite seu texto..."></textarea>
+                </div>
+                <div id="box-watchout">
+                    <label><i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem acento</label>
+                </div>
+                <div id="box-buttons">
+                    <button id="btCrip">Criptografar</button>
+                    <button id="btDescrip">Descriptografar</button>
+                </div>
+            </div>
+
+            <div id="box-output">
+                <div id="box-text">
+                    <textarea id="outputText" disabled></textarea>
+                    <div id="noMessage">
+                        <i class="fa-solid fa-comments"></i>
+                        <h2>Nenhuma mensagem encontrada</h2>
+                        <p>Digite um texto que deseja criptografar ou descriptografar</p>
+                    </div>
+                </div>
+                <div id="box-buttons">
+                    <button id="btCopiar">Copiar</button>
+                </div>
+            </div>
+
+        </div>
+    
+    </body>
+
+</html>
